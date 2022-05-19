@@ -1,0 +1,142 @@
+.menus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  margin: 1% 10%;
+}
+
+.menus > * {
+  margin: 50% 10%;
+}
+.menus > * > .name {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2% 0%;
+}
+.menus > * > .price {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2%;
+}
+.menus > * > .buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 2%;
+}
+.menus > * > .buttons > * {
+  margin: 5%;
+  padding: 2%;
+}
+
+.menus > * > .buttons > .minus {
+  width: 15%;
+  height: 15%;
+  font-size: 24px;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+.menus > * > .buttons > .plus {
+  width: 15%;
+  height: 15%;
+  font-size: 24px;
+  border-radius: 50%;
+  font-weight: bolder;
+}
+.menuinput {
+  border: none;
+  height: 24px;
+  width: 70px;
+  text-align: center;
+}
+.addition {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+.addition > .title {
+  display: flex;
+  justify-content: center;
+}
+.addition > .hr {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+}
+.addition > .requests {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2% 0%;
+
+  justify-content: center;
+}
+.request {
+  width: 50%;
+  height: 20vh;
+  text-align: start;
+  font-size: 20px;
+  font-weight: bolder;
+  resize: none;
+}
+.orders {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 5% 0%;
+}
+.orders > .order {
+  width: 20%;
+  font-weight: bolder;
+  font-size: 24px;
+  border-radius: 5px;
+  color: rgb(238, 174, 116);
+  background-color: rgb(64, 164, 231);
+}
+.formnone {
+  pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+  .menus > * {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-right: 15%;
+    width: 15vh;
+    text-align: center;
+  }
+  .menus img {
+    padding-left: 10%;
+    width: 20vh;
+  }
+  .menus > * > .buttons {
+    width: 200px;
+    text-align: start;
+    margin-left: 0px;
+  }
+
+  .menus > * > .buttons > .minus {
+    width: 120%;
+
+    font-size: 24px;
+    border-radius: 100%;
+    font-weight: bolder;
+  }
+  .menus > * > .buttons > .plus {
+    width: 120%;
+
+    font-size: 24px;
+    border-radius: 50%;
+    font-weight: bolder;
+  }
+  .menus > * > .buttons > input {
+    width: 210%;
+
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,69 @@
+.orderboxs {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgb(180, 230, 247);
+
+  min-height: 750px;
+  margin: auto;
+  margin-top: 2%;
+  max-width: 99%;
+}
+.orderbox {
+  display: flex;
+  font-size: 28px;
+  margin: auto;
+}
+.orderbox > * {
+  margin-top: 1%;
+}
+.id {
+  width: 9%;
+  text-align: center;
+}
+.gim {
+  width: 9%;
+  text-align: center;
+}
+.odeng {
+  width: 9%;
+  text-align: center;
+}
+.addition {
+  width: 50%;
+  text-align: center;
+}
+.date {
+  width: 9%;
+  text-align: center;
+}
+.button {
+  width: 10%;
+  margin: auto;
+  margin-top: 1%;
+  text-align: center;
+}
+.line {
+  height: 2px;
+  background-color: blue;
+  border: none;
+  width: 99%;
+  margin: auto;
+  margin-top: 1%;
+}
+.data > * {
+  font-size: 20px;
+}
+.data > .line {
+  height: 1px;
+  background-color: brown;
+}
+.disable {
+  pointer-events: none;
+}
+@media screen and (max-width: 700px) {
+  .orderbox > * {
+    font-size: 15px;
+    margin-top: 1%;
+    font-weight: bolder;
+  }
+}

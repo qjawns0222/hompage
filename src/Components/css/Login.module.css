@@ -1,0 +1,41 @@
+.loginbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.inputbox {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.option {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.option > .name {
+  width: 90px;
+}
+.option > .value > input {
+  font-size: 20px;
+}
+.buttonbox {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+.buttonbox > * {
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.buttonbox > * > * {
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: 20px;
+}
