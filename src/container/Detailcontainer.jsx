@@ -12,7 +12,7 @@ export default function Detailcontainer() {
 
   const { id } = useParams();
 
-  const filter = value.data.find((p) => p.id == id);
+  const filter = value.data.find((p) => p.id.toString() === id);
 
   const [odeng, setOdeng] = useState(filter.odeng);
 
@@ -44,11 +44,6 @@ export default function Detailcontainer() {
     if (gimbab === 0 && odeng === 0) {
       alert("주문을 추가해주세요");
       return;
-    }
-    if (value.id <= 10000) {
-      value.id = value.id + 1;
-    } else {
-      value.id = 1;
     }
 
     filter.gim = gimbab;

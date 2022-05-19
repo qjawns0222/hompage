@@ -8,7 +8,7 @@ export default function Createcontainer() {
   const navigate = useNavigate();
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-  console.log(value.authdata);
+
   const idchange = (e) => {
     setId(e.target.value);
   };

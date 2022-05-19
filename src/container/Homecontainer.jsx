@@ -9,6 +9,7 @@ export default function Homecontainer() {
     value.login = false;
     value.auth = false;
     value.user = "";
+
     navigate("/");
   };
 

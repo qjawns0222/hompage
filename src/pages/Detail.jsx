@@ -8,10 +8,11 @@ export default function Detail() {
   const navigate = useNavigate();
   const value = useContext(store);
   const { id } = useParams();
+  console.log(value.data.find((p) => p.id.toString() === id) !== null);
   useEffect(() => {
-    if (value.data.find((p) => p.id == id) == null) navigate("/");
+    if (value.data.find((p) => p.id.toString() === id) === null) navigate("/");
   });
-  if (value.data.find((p) => p.id == id) != null) {
+  if (value.data.find((p) => p.id.toString() === id) !== null) {
     return (
       <div>
         <Detailcontainer />

@@ -8,7 +8,7 @@ export default function Menucontainer() {
   const navigate = useNavigate();
   const value = useContext(store);
   const [odeng, setOdeng] = useState(0);
-
+  console.log(value.data.length);
   const [gimbab, setGimbab] = useState(0);
   const [addition, setAddition] = useState("");
   const gimminus = () => {
@@ -38,7 +38,7 @@ export default function Menucontainer() {
       return;
     }
     if (value.id <= 10000) {
-      value.id = value.id + 1;
+      value.id = value.data[value.data.length - 1].id + 1;
     } else {
       value.id = 1;
     }
@@ -51,7 +51,7 @@ export default function Menucontainer() {
       user: value.user,
       date: times,
     });
-    alert("순번을 기억해주세요\n" + "순번:" + value.id);
+    alert("순번을 기억해주세요\n 순번:" + value.id);
 
     setGimbab(0);
     setOdeng(0);

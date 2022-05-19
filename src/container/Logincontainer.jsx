@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 export default function Logincontainer() {
   const value = useContext(store);
   const navigate = useNavigate();
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+  const [id, setId] = useState();
+  const [password, setPassword] = useState();
 
   const idchange = (e) => {
     setId(e.target.value);
@@ -16,63 +16,61 @@ export default function Logincontainer() {
   };
   const login = () => {
     value.authdata.map((p) => {
-      if (value.alert) {
-        return p;
-      }
       if (p.id === id && p.password === password) {
         value.login = true;
         value.user = p.id;
         setId("");
         setPassword("");
-
         if (p.id === "qjawns0222") {
           value.auth = true;
         } else {
           value.auth = false;
         }
-
-        navigate("/");
       } else if (p.id !== id && p.password !== password) {
-        alert("비밀번호와아이디를 확인해주세요.");
-        value.alert = true;
+        value.idfalse = true;
       } else if (p.id === id && p.password !== password) {
-        alert("비밀번호가 틀렸습니다.");
-        value.alert = true;
+        value.passwordfalse = true;
       }
       return p;
     });
-    value.alert = false;
+    if (value.login) {
+      navigate("/");
+    } else if (value.passwordfalse) {
+      alert("비밀번호가 틀렸습니다.");
+    } else if (value.idfalse) {
+      alert("비밀번호와아이디를 확인해주세요.");
+    }
+    value.idfalse = false;
+    value.passwordfalse = false;
   };
   const loginkey = (e) => {
     if (e.charCode === 13) {
       value.authdata.map((p) => {
-        if (value.alert) {
-          return p;
-        }
         if (p.id === id && p.password === password) {
           value.login = true;
           value.user = p.id;
           setId("");
           setPassword("");
-
           if (p.id === "qjawns0222") {
             value.auth = true;
           } else {
             value.auth = false;
           }
-
-          navigate("/");
         } else if (p.id !== id && p.password !== password) {
-          alert("비밀번호와아이디를 확인해주세요.");
-          value.alert = true;
+          value.idfalse = true;
         } else if (p.id === id && p.password !== password) {
-          alert("비밀번호가 틀렸습니다.");
-          value.alert = true;
+          value.passwordfalse = true;
         }
         return p;
       });
+      if (value.login) {
+        navigate("/");
+      } else if (value.passwordfalse) {
+        alert("비밀번호가 틀렸습니다.");
+      } else if (value.idfalse) {
+        alert("비밀번호와아이디를 확인해주세요.");
+      }
     }
-    value.alert = false;
   };
 
   return (
